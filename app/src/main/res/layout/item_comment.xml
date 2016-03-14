@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="10dp"
+        android:minHeight="20dp"
+        android:id="@+id/linearLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="commenters name"
+            android:id="@+id/tvCommentUsername"
+            android:textSize="15sp"
+            android:textColor="#336386"
+            android:gravity="center_vertical" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="New Text"
+            android:id="@+id/tvCommentTimeAgo"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/tvCommentUsername"
+            android:layout_toEndOf="@+id/tvCommentUsername"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="15dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This is where the content of the text will appear"
+        android:id="@+id/tvCommentText"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="20dp" />
+
+</RelativeLayout>

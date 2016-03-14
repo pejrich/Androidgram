@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivPhoto"
+        android:minHeight="50dp"
+        android:scaleType="fitStart"
+        android:adjustViewBounds="true"
+        android:layout_below="@+id/frameLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#A0FFFFFF"
+        android:id="@+id/frameLayout">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/ivProfilePicture" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Username"
+            android:id="@+id/tvUsername"
+            android:textColor="#336386"
+            android:textSize="15sp"
+            android:gravity="center_vertical"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/ivProfilePicture"
+            android:layout_toEndOf="@+id/ivProfilePicture" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="New Text"
+            android:id="@+id/tvTimestamp"
+            android:textColor="#336386"
+            android:textSize="15sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A0FFFFFF"
+        android:id="@+id/captionLayout"
+        android:layout_below="@+id/ivPhoto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="39dp"
+        android:paddingLeft="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:drawableLeft="@drawable/heart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/defaultLikes"
+            android:id="@+id/tvLikes"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingBottom="5dp"
+            android:textSize="18sp"
+            android:paddingLeft="3dp" />
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvLikes"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Text"
+                android:id="@+id/tvCaptionUsername"
+                android:textColor="#336386"
+                android:textSize="15sp"
+                android:textIsSelectable="false"
+                android:paddingBottom="2dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="This is a really really long caption. This is a really really long caption. This is a really really long caption. This is a really really long caption. This is a really really long caption. This is a really really long caption. "
+                android:id="@+id/tvCaptionCaption"
+                android:layout_marginBottom="20dp" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Here is some text"
+                android:id="@+id/tvCommentHeader"
+                android:layout_below="@+id/tvCaptionCaption"
+                android:textSize="18sp" />
+
+            <ListView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lvComments"
+                android:layout_below="@+id/tvCommentHeader"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:minHeight="400dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
