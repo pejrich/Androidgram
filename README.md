@@ -4,6 +4,8 @@
 
 Time spent: **6** hours spent in total
 
+![Video Walkthrough](androidgram-demo.gif)
+
 ## User Stories
 
 The following **required** functionality is completed:
