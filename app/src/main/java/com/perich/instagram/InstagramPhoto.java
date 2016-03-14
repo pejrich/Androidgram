@@ -30,4 +30,23 @@ public class InstagramPhoto {
         } catch (JSONException e) {}
         return obj;
     }
+
+    public String timeAgoInWords() {
+        long unixTime = System.currentTimeMillis() / 1000L;
+        long difference = unixTime - this.createdAt;
+        long differenceMins = difference / 60;
+        long differenceHours = differenceMins / 60;
+        if (differenceHours > 1) {
+            return String.valueOf(differenceHours) + " hours ago";
+        }
+        else if (differenceHours == 1) {
+            return String.valueOf(differenceHours) + " hour ago";
+        }
+        else if (differenceMins > 1) {
+            return String.valueOf(differenceMins) + " minutes ago";
+        }
+        else {
+            return "Just now";
+        }
+    }
 }

@@ -71,7 +71,7 @@ public class InstagramPhotosAdapter extends ArrayAdapter<InstagramPhoto> {
         // Header elements
         Picasso.with(getContext()).load(photo.userPPUrl).into(ivProfilePicture);
         tvUsername.setText(photo.username);
-        tvTimestamp.setText(timeAgoInHours(photo.createdAt));
+        tvTimestamp.setText(photo.timeAgoInWords());
         // Insert the main photo
         Picasso.with(getContext()).load(photo.imageUrl).into(ivPhoto);
         // Caption elements
@@ -97,12 +97,6 @@ public class InstagramPhotosAdapter extends ArrayAdapter<InstagramPhoto> {
             returnString += " ";
         }
         return returnString += caption;
-    }
-
-    private String timeAgoInHours(long timestamp) {
-        long unixTime = System.currentTimeMillis() / 1000L;
-        long difference = unixTime - timestamp;
-        return String.valueOf(difference / 60 / 60) + " hours ago";
     }
 
     private void clearOldImages() {
