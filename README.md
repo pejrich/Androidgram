@@ -4,8 +4,6 @@
 
 Time spent: **6** hours spent in total
 
-![Video Walkthrough](androidgram-demo.gif)
-
 ## User Stories
 
 The following **required** functionality is completed:
@@ -37,7 +35,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Video Walkthrough](androidgram-demo.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
