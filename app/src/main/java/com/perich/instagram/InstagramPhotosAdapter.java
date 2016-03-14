@@ -7,22 +7,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by perich on 3/10/16.
  */
 public class InstagramPhotosAdapter extends ArrayAdapter<InstagramPhoto> {
-
-    public Context that;
-
-    private InstagramCommentsAdapter aComments;
 
     // Header elements
     public ImageView ivProfilePicture;
@@ -39,7 +33,6 @@ public class InstagramPhotosAdapter extends ArrayAdapter<InstagramPhoto> {
 
     public InstagramPhotosAdapter(Context context, List<InstagramPhoto> objects) {
         super(context, android.R.layout.simple_list_item_1, objects);
-        that = context;
     }
 
     @Override
@@ -54,22 +47,6 @@ public class InstagramPhotosAdapter extends ArrayAdapter<InstagramPhoto> {
         }
         getViewElements(convertView);
         setViewElementsData(photo);
-
-        // Setup comments adapter
-//        aComments = new InstagramCommentsAdapter(that, photo.comments);
-        aComments = new InstagramCommentsAdapter(that, new ArrayList<InstagramComment>());
-        // find the list view
-        ListView lvComments = (ListView) convertView.findViewById(R.id.lvComments);
-        // bind adapter to listView
-        lvComments.setAdapter(aComments);
-        InstagramComment co = new InstagramComment();
-        co.username = "uusseerr";
-        co.text = "tteexxtt";
-        aComments.add(co);
-        aComments.add(co);
-        aComments.add(co);
-
-//        aComments.notifyDataSetChanged();
 
         return convertView;
     }

@@ -37,7 +37,8 @@
             android:gravity="center_vertical"
             android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/ivProfilePicture"
-            android:layout_toEndOf="@+id/ivProfilePicture" />
+            android:layout_toEndOf="@+id/ivProfilePicture"
+            android:layout_marginLeft="10dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -85,7 +86,8 @@
             android:layout_below="@+id/tvLikes"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true">
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -93,7 +95,7 @@
                 android:text="New Text"
                 android:id="@+id/tvCaptionUsername"
                 android:textColor="#336386"
-                android:textSize="15sp"
+                android:textSize="18sp"
                 android:textIsSelectable="false"
                 android:paddingBottom="2dp" />
 
@@ -102,7 +104,8 @@
                 android:layout_height="wrap_content"
                 android:text="This is a really really long caption. This is a really really long caption. This is a really really long caption. This is a really really long caption. This is a really really long caption. This is a really really long caption. "
                 android:id="@+id/tvCaptionCaption"
-                android:layout_marginBottom="20dp" />
+                android:textSize="18sp"
+                android:layout_marginBottom="5dp" />
 
 
             <TextView
@@ -110,17 +113,11 @@
                 android:layout_height="wrap_content"
                 android:text="Here is some text"
                 android:id="@+id/tvCommentHeader"
+                android:textSize="15sp"
+                android:paddingBottom="20dp"
                 android:layout_below="@+id/tvCaptionCaption"
-                android:textSize="18sp" />
-
-            <ListView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/lvComments"
-                android:layout_below="@+id/tvCommentHeader"
                 android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:minHeight="400dp" />
+                android:layout_alignParentStart="true" />
 
         </RelativeLayout>
 

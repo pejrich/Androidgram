@@ -1,10 +1,7 @@
 package com.perich.instagram;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 /**
  * Created by perich on 3/10/16.
@@ -18,7 +15,6 @@ public class InstagramPhoto {
     public int likesCount;
     public int commentCount;
     public long createdAt;
-    public ArrayList comments;
 
     public static InstagramPhoto fromJSON(JSONObject json) {
         InstagramPhoto obj = new InstagramPhoto();
@@ -31,12 +27,6 @@ public class InstagramPhoto {
             obj.likesCount  = json.getJSONObject("likes").getInt("count");
             obj.commentCount= json.getJSONObject("comments").getInt("count");
             obj.createdAt   = json.getJSONObject("caption").getLong("created_time");
-            // Get comments
-            JSONArray jsonComments = json.getJSONObject("comments").getJSONArray("data");
-            obj.comments = new ArrayList<InstagramComment>();
-            for (int i = 0; i < jsonComments.length(); i++) {
-                obj.comments.add(InstagramComment.fromJSON(jsonComments.getJSONObject(i)));
-            }
         } catch (JSONException e) {}
         return obj;
     }
